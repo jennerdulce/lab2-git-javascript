@@ -1,0 +1,12 @@
+# Typically NPM i anyways
+node_modules/
+
+# Contain Important Keys
+.env
+
+# OS Files that are not useful outside OS context
+.DS_Store
+Thumbs.db
+
+# Log files
+*.log
