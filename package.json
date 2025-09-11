@@ -1,0 +1,13 @@
+{
+  "name": "lab02-git-javascript",
+  "version": "1.0.0",
+  "description": "## Description A collection of JavaSCript utility functions demonstrating Git workflows and Node.js module patterns.",
+    "type": "module",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "keywords": [],
+  "author": "",
+  "license": "ISC"
+}
