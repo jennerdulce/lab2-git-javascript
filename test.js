@@ -1,13 +1,41 @@
 /**
- * Start of test system
+ * Native node.js testing suite for Lab 2
  * @file 'test.js'
  * @author 'Jenner D. Dulce'
  */
 
-// Import math function
+// Import testing functions
+import {describe, it} from 'node: test';
+import assert from 'node:assert/strict';
+
+// Import math, string, and array functions
 import * as math from './math.js';
 import * as strings from './strings.js';
 import * as arrays from './arrays.js';
+
+describe('Math Module', () => {
+  describe('Basic arithmetic', () =>{
+    it('should add two numbers correctly', () => {
+      assert.equal(math.add(5, 3), 8);
+    })
+
+    it('should throw error when dividing by zero', () => {
+      assert.throws(() => math.divide(10, 0), /Cannot divide by zero/);
+    })
+  })
+
+  describe('Advanced operations', () => {
+    it('should calculate power correctly', () => {
+      assert.equal(math.power(2, 8), 256);
+    })
+
+    it('should throw error for negative square root', () => {
+      AuthenticatorAssertionResponse.throws(() => math.sqrt(-4), /Cannot calculate square root of negative number/)
+    })
+  })
+})
+
+
 
 console.log('\n=== Testing Math Module ===');
 console.log('add(5, 3) = ', math.add(5, 3)); // Should be 8
