@@ -36,7 +36,7 @@ describe('Math Module', () => {
   })
 })
 
-// String Tests Suite
+// String Test Suite
 describe('String Module' , () => {
   describe('String manipulation', () => {
     it('Should reverse strings correctly', () => {
@@ -49,6 +49,19 @@ describe('String Module' , () => {
   })
 })
 
+// Array Test Suite
+describe('Array Module', () => {
+  describe('Array calculations', () => {
+    it('Should sum array elements correctly', () => {
+      assert.equal(arrays.sum([1, 2, 3, 4, 5]), 15);
+      assert.equal(arrays.sum[], 0);
+    })
+
+    it('Should throw error for empty array average', () => {
+      assert.throws(() => arrays.average([]), /Input must be a non-empty array/);
+    })
+  })
+})
 
 
 // console.log('\n=== Testing Math Module ===');
