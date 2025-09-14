@@ -10,7 +10,7 @@
  * @param {number} b - Second number
  * @returns {number} Sum of a and b
  */
-function add(a, b) {
+export function add(a, b) {
   return a + b;
 }
 
@@ -20,7 +20,7 @@ function add(a, b) {
  * @param {number} b - Second number
  * @returns {number} Difference of a and b
  */
-function subtract(a, b) {
+export function subtract(a, b) {
   return a - b;
 }
 
@@ -30,7 +30,7 @@ function subtract(a, b) {
  * @param {number} b - Second number
  * @returns Product of a and b
  */
-function multiply(a, b) {
+export function multiply(a, b) {
   return a * b;
 }
 
@@ -41,7 +41,7 @@ function multiply(a, b) {
  * @returns {number} Quotient
  * @throws {Error} If b is zero
 */
-function divide(a, b) {
+export function divide(a, b) {
   if (b === 0) {
     throw new Error('Connot divide by zero');
   }
@@ -54,7 +54,7 @@ function divide(a, b) {
  * @param {number} exponent - Exponent
  * @returns {number} Base raised to exponent
  */
-function power(base, exponent) {
+export function power(base, exponent) {
   return Math.pow(base, exponent);
 }
 
@@ -64,7 +64,7 @@ function power(base, exponent) {
  * @returns {number} Square root
  * @throws {Error} If n is negative
  */
-function sqrt(n) {
+export function sqrt(n) {
   if (n < 0) {
     throw new Error('Cannot calculate square root of negative number');
   }
@@ -77,7 +77,7 @@ function sqrt(n) {
  * @returns {number} Factorial of n
  * @throws {Error} If n is negative
  */
-function factorial(n) {
+export function factorial(n) {
   let result = 1;
 
   if (n < 0) {
