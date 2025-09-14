@@ -23,6 +23,10 @@ describe('Math Module', () => {
     it('should throw error when dividing by zero', () => {
       assert.throws(() => math.divide(10, 0), /Cannot divide by zero/);
     })
+
+    it('Should throw error when adding strings', () => {
+      assert.throws(() => math.add("two", "three"), /Cannot add strings/)
+    })
   })
 
   describe('Advanced operations', () => {

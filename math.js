@@ -11,6 +11,9 @@
  * @returns {number} Sum of a and b
  */
 export function add(a, b) {
+  if ((typeof a !== "number") || (typeof b !== "number")) {
+    throw new Error('Cannot add strings');
+  }
   return a + b;
 }
 
