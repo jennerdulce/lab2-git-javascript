@@ -54,5 +54,10 @@ export function countVowels(str) {
  * @returns {boolean} True if palindrome
  */
 export function isPalindrome(str) {
-  return "stubbed";
+  if (typeof str !== 'string') {
+    throw new Error('Input must be a string');
+  }
+  const cleaned = str.replace(/\s/g, '').toLowerCase();
+  const reversed = cleaned.split('').reverse().join('');
+  return cleaned === reversed;
 }
