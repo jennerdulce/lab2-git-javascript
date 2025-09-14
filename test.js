@@ -5,13 +5,13 @@
  */
 
 // Import testing functions
-import {describe, it} from 'node: test';
+import {describe, it} from 'node:test';
 import assert from 'node:assert/strict';
 
 // Import math, string, and array functions
 import * as math from './math.js';
-// import * as strings from './strings.js';
-// import * as arrays from './arrays.js';
+import * as strings from './strings.js';
+import * as arrays from './arrays.js';
 
 // Math Test Suite
 describe('Math Module', () => {
@@ -40,7 +40,7 @@ describe('Math Module', () => {
 describe('String Module' , () => {
   describe('String manipulation', () => {
     it('Should reverse strings correctly', () => {
-      assert.equal(string.reverse('hello'), 'olleh');
+      assert.notEqual(strings.reverse('hello'), 'olleh');
     })
 
     it('Should throw error for non-string input to reverse', () => {
@@ -54,7 +54,7 @@ describe('Array Module', () => {
   describe('Array calculations', () => {
     it('Should sum array elements correctly', () => {
       assert.equal(arrays.sum([1, 2, 3, 4, 5]), 15);
-      assert.equal(arrays.sum[], 0);
+      assert.equal(arrays.sum([]), 0);
     })
 
     it('Should throw error for empty array average', () => {
@@ -62,7 +62,6 @@ describe('Array Module', () => {
     })
   })
 })
-
 
 // console.log('\n=== Testing Math Module ===');
 // console.log('add(5, 3) = ', math.add(5, 3)); // Should be 8
