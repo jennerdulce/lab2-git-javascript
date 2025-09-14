@@ -1,22 +1,46 @@
 /**
- * 
- * @param {*} a 
- * @param {*} b 
- * @returns  {*}
+ * Math utilities for learning purposes
+ * @file 'math.js'
+ * @author 'Jenner D Dulce'
  */
 
+/**
+ * Add two numbers
+ * @param {number} a - First number
+ * @param {number} b - Second number
+ * @returns {number} Sum of a and b
+ */
 function add(a, b) {
   return a + b;
 }
 
+/**
+ * Subtract two
+ * @param {number} a - First number
+ * @param {number} b - Second number
+ * @returns {number} Difference of a and b
+ */
 function subtract(a, b) {
   return a - b;
 }
 
+/**
+ * Multiply
+ * @param {number} a - First number
+ * @param {number} b - Second number
+ * @returns Product of a and b
+ */
 function multiply(a, b) {
   return a * b;
 }
 
+/** 
+ * Divide two numbers
+ * @param {number} a - Dividend
+ * @param {number} b - Divisor
+ * @returns {number} Quotient
+ * @throws {Error} If b is zero
+*/
 function divide(a, b) {
   if (b === 0) {
     throw new Error('Connot divide by zero');
@@ -24,10 +48,22 @@ function divide(a, b) {
   return a / b;
 }
 
+/**
+ * Calculate power
+ * @param {number} base - Base number
+ * @param {number} exponent - Exponent
+ * @returns {number} Base raised to exponent
+ */
 function power(base, exponent) {
   return Math.pow(base, exponent);
 }
 
+/**
+ * Calculate square root
+ * @param {number} n - Number to find square root of
+ * @returns {number} Square root
+ * @throws {Error} If n is negative
+ */
 function sqrt(n) {
   if (n < 0) {
     throw new Error('Cannot calculate square root of negative number');
@@ -35,6 +71,12 @@ function sqrt(n) {
   return Math.sqrt(n);
 }
 
+/**
+ * Calculate factorial
+ * @param {number} n - Number to calculate factorial of
+ * @returns {number} Factorial of n
+ * @throws {Error} If n is negative
+ */
 function factorial(n) {
   let result = 1;
 
@@ -48,16 +90,3 @@ function factorial(n) {
   }
   return result;
 }
-
-
-
-
-// Test the functions with console.log
-console.log('Testing Math Functions');
-console.log('add(5, 3) = ', add(5, 3)); // Should be 8
-console.log('subtract(10, 4) = ', subtract(10, 4)); // Should be 6
-console.log('mulitply(3, 7) = ', multiply(3, 7)); // Should be 21
-console.log('divide(20, 4) = ', divide(20, 4)); // Should be 5
-console.log('power(2, 8) = ', power(2, 8)); // Should be 256
-console.log('sqrt(16) = ', sqrt(16)); // Should be 4
-console.log('factorial(5) = ', factorial(5)); // Should be 120
