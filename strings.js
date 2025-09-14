@@ -10,7 +10,10 @@
  * @returns {string} Reversed String
  */
 export function reverse(str) {
-  return "stubbed";
+  if (typeof str !== 'string') {
+    throw new Error('Input must be a string');
+  }
+  return str.split(',').reverse().join();
 }
 
 /**
