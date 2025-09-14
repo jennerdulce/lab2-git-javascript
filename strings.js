@@ -35,7 +35,17 @@ export function capitalize(str) {
  * @returns {number} Number of vowels
  */
 export function countVowels(str) {
-  return "stubbed";
+  if (typeof str !== 'string') {
+    throw new Error('Input must be a string');
+  }
+  const vowels = 'aeiouAEIOU';
+  let count = 0;
+  for (let char of str) {
+    if (vowels.includes(char)) {
+      count++;
+    }
+  }
+  return count;
 }
 
 /**
