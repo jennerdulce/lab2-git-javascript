@@ -20,3 +20,7 @@ jdulce@sandiego.edu
 ## License
 MIT
 
+## Features
+- ** Math utilities** : Basic arithmetic, factorial, power operations
+- ** String utilities** : Reverse, capitalize, palindrome checking
+- ** Array utilities** : Sum, average, filtering, duplicate removal
